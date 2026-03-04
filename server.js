@@ -112,25 +112,3 @@ app.post('/merge', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`FFmpeg merge server running on port ${PORT}`);
 });
-```
-
----
-
-**Step 4 — Deploy to Railway**
-1. Go to **railway.app** → Sign up with GitHub
-2. Click **"New Project"**
-3. Click **"Deploy from GitHub repo"**
-4. Select your `ffmpeg-merge-server` repo
-5. Railway auto-detects the Dockerfile and starts building
-6. Wait 3-5 minutes for the build to finish
-7. Click your service → go to **"Settings"** tab
-8. Scroll to **"Networking"** → click **"Generate Domain"**
-9. Copy the URL — looks like:
-```
-https://ffmpeg-merge-server-production-abc123.up.railway.app
-```
-
-**Step 5 — Test it's working**
-Open your browser and go to:
-```
-https://your-railway-url.up.railway.app
